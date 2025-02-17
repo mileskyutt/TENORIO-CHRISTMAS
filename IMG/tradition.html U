@@ -1,0 +1,17 @@
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__logo">
+            <a href=""><i class="fa-regular fa-snowflake"></i>Christmas</a>
+          </div>
+          <ul class="header__nav">
+            <li><a href="">TRADITIONS</a></li>
+            <li><a href="">FOOD & DRINKS</a></li>
+            <li><a href="">DESIGNS</a></li>
+            <li><a href="">CAROLS</a></li>
+            <li><a href="">DECORATIONS</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>

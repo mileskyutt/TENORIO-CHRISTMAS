@@ -564,6 +564,41 @@ img {
 .footer__bottom--b li:nth-child(2) {
   margin-top: 3rem;
 }
+/* TRADITIONS HUB */
+.traditionBanner {
+  padding: 5rem 0;
+}
+.traditionBanner__wrapper img {
+  width: 45rem;
+}
+.traditionBanner__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.traditionBanner__cards {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5rem;
+}
+.traditionBanner h1 {
+  text-align: center;
+  font-size: var(--h1);
+  color: var(--clr-primary);
+}
+.traditionBanner p {
+  color: var(--clr-secondary);
+}
+/* FOODS DRINKS */
+.foodsdrinks h1 {
+  text-align: center;
+  font-size: var(--h1);
+  color: var(--clr-primary);
+}
+.foodsdrinks p {
+  color: var(--clr-secondary);
+}
 
 /* REPEATABLE PATTERN */
 .cards img {
@@ -571,6 +606,9 @@ img {
 }
 .cards__details {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 .cards__details {
   color: var(--clr-secondary);

@@ -171,6 +171,76 @@ img {
   transition: all 0.3s ease;
 }
 
+/* HEADER-MOBILE */
+.header .toggle__menu span {
+  background-color: var(--clr-primary);
+  width: 3rem;
+  height: 0.3rem;
+  display: block;
+  border: 2px solid var(--clr-primary);
+  border-radius: 1rem;
+  transition: all 0.5s ease;
+}
+.header .toggle__menu {
+  display: none;
+}
+@media screen and (max-width: 520px) {
+  .header .toggle__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .header {
+    position: fixed;
+    background: var(--clr-light);
+    width: 100%;
+    z-index: 99;
+  }
+  .header__nav {
+    position: fixed;
+    background: var(--clr-light);
+    flex-direction: column;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin-top: 22rem;
+    transform: translateY(-14rem);
+    transition: all 0.5s ease;
+    right: -100%;
+  }
+  .header__nav.open {
+    right: 0;
+    transition: all 0.5s ease;
+  }
+  .header img {
+    width: 10rem;
+  }
+  .header__nav li a {
+    font-size: 2rem;
+  }
+  .header__nav li a::after {
+    background: unset;
+  }
+  .header__nav li a:hover,
+  .header__nav li a.active {
+    color: var(--clr-secondary);
+  }
+  .toggle__menu.open span:first-child {
+    transform: translate(0, 6px) rotate(225deg);
+    transition: all 0.5s ease;
+  }
+  .toggle__menu.open span:nth-child(2) {
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  .toggle__menu.open span:last-child {
+    transform: translate(0, -11.5px) rotate(-225deg);
+    transition: all 0.5s ease;
+  }
+}
 /* BANNER */
 .banner {
   padding-top: 7rem;
@@ -193,6 +263,17 @@ img {
 .banner img {
   margin: 10rem 0;
   width: 100%;
+}
+
+/* BANNER - MOBILE */
+@media screen and (max-width: 520px) {
+  .banner {
+    padding-top: 10rem;
+    height: 50rem;
+  }
+  .banner h1 {
+    font-size: var(--h3);
+  }
 }
 
 /* HOLIDAY */
@@ -238,6 +319,31 @@ img {
 .holiday__left {
   border-right: 1px solid rgb(43, 43, 43, 0.1);
   padding-right: 5rem;
+}
+/* HOLIDAY - MOBILE */
+@media screen and (max-width: 520px) {
+  .holiday {
+    margin-top: 0;
+  }
+  .holiday__right h2 {
+    font-size: var(--h3);
+    line-height: 4rem;
+  }
+  .holiday__cards {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .holiday__wrapper {
+    grid-template-columns: 1fr;
+    gap: unset;
+  }
+  .holiday__left {
+    border-right: unset;
+    padding-right: unset;
+  }
+  .holiday__right {
+    margin-top: 0;
+  }
 }
 
 /* DESIGN */
@@ -304,8 +410,34 @@ img {
 }
 ,
 .designCarol__details p > span {
-  text-decoration: ;
+  text-decoration: underline;
 }
+
+/* DESIGNCAROL - MOBILE */
+@media screen and (max-width: 520px) {
+  .designCarol {
+    margin-top: 0rem;
+  }
+  .designCarol__wrapper {
+    height: unset;
+  }
+  .designCarol__img {
+    display: none;
+  }
+  .designCarol__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 3rem 0;
+    gap: 2rem;
+    color: var(--clr-secondary);
+    background-color: unset;
+  }
+  .designCarol__card {
+    background-color: var(--clr-light);
+    margin-bottom: 2rem;
+  }
+}
+
 /* TRADITION */
 .tradition {
   padding: 5rem 0;
@@ -379,6 +511,7 @@ img {
 .tradition__info input::placeholder {
   color: var(--clr-primary);
 }
+
 /* REPEATABLE ITEM */
 .item img {
   height: 35rem;
@@ -462,12 +595,7 @@ img {
 .designCarol__item ul:last-child {
   margin-bottom: unset;
 }
-.designCarol__wrapper:last-child {
-  background-color: var(--clr-secondary);
-  color: var(--clr-light);
-  height: 55rem;
-  padding: 5rem 7rem;
-}
+
 .designCarol__wrappers {
   background-color: var(--clr-secondary);
   height: 55rem;
@@ -479,6 +607,50 @@ img {
 .designCarol__item:last-child {
   border-right: unset;
 }
+/* CAROLS - MOBILE */
+@media screen and (max-width: 520px) {
+  .designCarol {
+    margin-top: 0rem;
+  }
+  .designCarol__wrappers {
+    height: unset;
+  }
+  .designCarol__img {
+    display: none;
+  }
+  .designCarol__contents {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 3rem 0;
+    gap: 2rem;
+    color: var(--clr-secondary);
+    background-color: unset;
+  }
+  .designCarol__item {
+    background-color: var(--clr-light);
+    margin-bottom: 2rem;
+  }
+}
+
+/* TRADITION - MOBILE */
+@media screen and (max-width: 520px) {
+  .tradition {
+    margin-top: 0;
+  }
+  .tradition__item {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .tradition__wrapper {
+    grid-template-columns: 1fr;
+    gap: unset;
+  }
+  .holiday__left {
+    border-right: unset;
+    padding-right: unset;
+  }
+}
+
 /* DECORATIONS */
 .decoration__wrapper {
   display: grid;
@@ -499,6 +671,10 @@ img {
   line-height: 5rem;
   padding: 1.3rem;
 }
+.decoration__left img {
+  border-bottom: 4px solid var(--clr-secondary);
+  margin-bottom: 1rem;
+}
 .decoration__left p > span {
   text-decoration: underline;
 }
@@ -514,9 +690,32 @@ img {
   margin-top: 5rem;
 }
 .decoration__right h4 {
-  font-size: 1px solid rgb(43, 43, 43, 0.1);
-  padding-right: 5rem;
+  font-size: var(--h4);
+  margin-bottom: 2rem;
+  color: var(--clr-primary);
 }
+/* DECORATIONS - MOBILE */
+@media screen and (max-width: 520px) {
+  .decoration {
+    margin-top: 0;
+  }
+  .decoration__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+  .decoration__contents {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 3rem 0;
+    gap: 2rem;
+    background-color: unset;
+  }
+  .decoration__card {
+    background-color: var(--clr-light);
+  }
+}
+
 /* FOOTERS */
 .footer {
   background-color: var(--clr-secondary);
@@ -564,6 +763,16 @@ img {
 .footer__bottom--b li:nth-child(2) {
   margin-top: 3rem;
 }
+/* FOOTER - MOBILE */
+@media screen and (max-width: 520px) {
+  .footer {
+    margin-top: 0;
+  }
+  .footer__bottom {
+    display: grid;
+  }
+}
+
 /* TRADITIONS HUB */
 .traditionBanner {
   padding: 5rem 0;
@@ -582,9 +791,9 @@ img {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5rem;
 }
-.traditionBanner h1 {
+.traditionBanner__wrapper h1 {
   text-align: center;
-  font-size: var(--h1);
+  font-size: var(--h3);
   color: var(--clr-primary);
 }
 .traditionBanner p {
@@ -598,6 +807,15 @@ img {
 }
 .foodsdrinks p {
   color: var(--clr-secondary);
+}
+/* TRADITIONS-MOBILE */
+@media screen and (max-width: 520px) {
+  .traditionBanner__wrapper {
+    margin-top: 7rem;
+  }
+  .traditionBanner__cards {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* REPEATABLE PATTERN */
